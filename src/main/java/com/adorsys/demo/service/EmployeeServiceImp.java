@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.adorsys.demo.exception.CustomException;
 import com.adorsys.demo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class EmployeeServiceImp implements EmployeeService {
 
 	@Override
 	public Employee getEmployeeById(Long id) {
-		return repo.findById(id).orElseThrow(() -> new RuntimeException("Employee nicht gefunden " + id));
+		return repo.findById(id).orElseThrow(() -> new CustomException("Employee nicht gefunden " + id));
 	}
 
 	@Override

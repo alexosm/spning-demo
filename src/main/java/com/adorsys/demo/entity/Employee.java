@@ -57,4 +57,14 @@ public class Employee {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
+
+	@Override
+	public String toString() {
+		return "Employee{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", city='" + city + '\'' +
+				", hobby='" + hobby + '\'' +
+				'}';
+	}
 }
